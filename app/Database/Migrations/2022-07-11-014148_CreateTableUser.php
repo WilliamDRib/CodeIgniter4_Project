@@ -18,9 +18,8 @@ class CreateTableUser extends Migration
                 'type'          => 'VARCHAR',
                 'constraint'    => 255
             ],
-            'name' => [
-                'type'          => 'INT',
-                'constraint'    => 255
+            'admin' => [
+                'type'          => 'INT'
             ],
         ]) -> createTable('users');
     }

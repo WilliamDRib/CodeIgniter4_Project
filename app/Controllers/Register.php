@@ -2,9 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\UserModel;
-
-class Register extends BaseController
+class Register extends BaseController 
 {
     public function index()
     {
@@ -14,7 +12,19 @@ class Register extends BaseController
     public function register()
     {
 
-        $userModel = new UserModel();
+        echo("teste1");
+
+        // $admin = $_POST['adm'] ? 1 : 0;
+
+        // echo($_POST['name'] . $_POST['pass'] . $_POST['adm'] . $admin);
+
+        // $Registrar = new \App\Models\RegisterModel();
+
+        // $Registrar::add($_POST['name'], $_POST['pass'], $admin);
+
+        return view('pages/register');
+
+        // $userModel = new UserModel();
 
         // $userModel -> save([
         //     'name'     => 'Gui',
@@ -22,8 +32,5 @@ class Register extends BaseController
         //     'admin'    => 0
         // ]);
 
-        foreach ($userModel as $i){
-            echo($i);
-        }
     }
 }

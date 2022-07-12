@@ -65,30 +65,26 @@
     }
 </style>
 
-<form action="action_page.php" method="post">
-<div class="imgcontainer">
-    <img src="http://images7.memedroid.com/images/UPLOADED860/5f6673b257253.jpeg" alt="Avatar" class="avatar">
-</div>
+<form action="/Register/add" method="POST">
+    <div class="imgcontainer">
+        <img src="http://images7.memedroid.com/images/UPLOADED860/5f6673b257253.jpeg" alt="Avatar" class="avatar">
+    </div>
 
-<div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <div class="container">
+        <label for="name"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="name" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+        <label for="pass"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="pass" required>
 
-    <button type="submit">Register</button>
+        <button type="submit">Register</button>
 
-    <label>
-    <input type="checkbox" name="adm"> Admin?
-    </label>
+        <label><input type="checkbox" name="adm"> Admin?</label>
 
-    <label>
-    <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-</div>
+        <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+    </div>
 
-<div class="container" style="background-color:#f1f1f1">
-    <a type="button" class="cancelbtn" href="/">Cancel</a>
-</div>
+    <div class="container" style="background-color:#f1f1f1">
+        <a type="button" class="cancelbtn" href="/">Cancel</a>
+    </div>
 </form>
