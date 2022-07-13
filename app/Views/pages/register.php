@@ -65,7 +65,7 @@
     }
 </style>
 
-<form action="/Register/add" method="POST">
+<form action="/teste" method="POST">
     <div class="imgcontainer">
         <img src="http://images7.memedroid.com/images/UPLOADED860/5f6673b257253.jpeg" alt="Avatar" class="avatar">
     </div>
@@ -74,14 +74,14 @@
         <label for="name"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="name" required>
 
-        <label for="pass"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="pass" required>
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
 
         <button type="submit">Register</button>
 
-        <label><input type="checkbox" name="adm"> Admin?</label>
+        <label for="admin"><input type="checkbox" name="admin"> Admin?</label>
 
-        <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+        <label for="remember"><input type="checkbox" checked="checked" name="remember"> Remember me</label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">

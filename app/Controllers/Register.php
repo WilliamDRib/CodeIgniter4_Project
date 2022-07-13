@@ -2,35 +2,47 @@
 
 namespace App\Controllers;
 
+use Exception;
+
 class Register extends BaseController 
 {
+    private $userModel;
+
+    public function __construct()
+    {
+        $this -> userModel = new \App\Models\UserModel();
+    }
+
     public function index()
     {
         return view('pages/register');
     }
 
-    public function register()
+    public function listarUser()
+    {
+        $data = $this -> userModel -> findAll();
+        return $this -> response -> setJSON($data);
+    }
+
+    public function register()  
     {
 
-        echo("teste1");
+        $newUser['name']     = $this -> request -> getPost('name');
+        $newUser['password'] = $this -> request -> getPost('password');
+        $newUser['admin']    = $this -> request -> getPost('admin') ? 1 : 0;
 
-        // $admin = $_POST['adm'] ? 1 : 0;
+        try{
+            if($this -> userModel -> save($newUser)){
+                // return view("pages/home");
+                return \App\Controllers\Register::listarUser();
+            }else{
+                echo("Erro");
+                return \App\Controllers\Register::index();
+            }
 
-        // echo($_POST['name'] . $_POST['pass'] . $_POST['adm'] . $admin);
-
-        // $Registrar = new \App\Models\RegisterModel();
-
-        // $Registrar::add($_POST['name'], $_POST['pass'], $admin);
-
-        return view('pages/register');
-
-        // $userModel = new UserModel();
-
-        // $userModel -> save([
-        //     'name'     => 'Gui',
-        //     'password' => '123',
-        //     'admin'    => 0
-        // ]);
+        }catch(Exception $e){
+            echo ($e -> getMessage());
+        }
 
     }
 }

@@ -65,17 +65,17 @@
     }
 </style>
 
-<form action="action_page.php" method="post">
+<form action="/teste1" method="post">
 <div class="imgcontainer">
     <img src="https://c.tenor.com/kHcmsxlKHEAAAAAC/rock-one-eyebrow-raised-rock-staring.gif" alt="Avatar" class="avatar">
 </div>
 
 <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <label for="name"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="name" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
 
     <button type="submit">Login</button>
     <label>
