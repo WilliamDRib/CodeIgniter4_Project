@@ -31,19 +31,11 @@
         opacity: 0.8;
     }
 
-    /* Extra style for the cancel button (red) */
-    .cancelbtn {
-        color: white;
-        text-decoration: none;
-        width: auto;
-        padding: 10px 18px;
-        background-color: #f44336;
-    }
-
     /* Center the avatar image inside this container */
     .imgcontainer {
         text-align: center;
         margin: 24px 0 12px 0;
+        margin-left:5%;
     }
 
     /* Avatar image */
@@ -57,12 +49,6 @@
         padding: 16px;
     }
 
-    /* Change styles for span and cancel button on extra small screens */
-    @media screen and (max-width: 300px) {
-        .cancelbtn {
-            width: 100%;
-        }
-    }
 </style>
 
 <form action="/register_inserir" method="POST">
@@ -80,11 +66,5 @@
         <button type="submit">Register</button>
 
         <label for="admin"><input type="checkbox" name="admin"> Admin?</label>
-
-        <label for="remember"><input type="checkbox" checked="checked" name="remember"> Remember me</label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-        <a type="button" class="cancelbtn" href="/">Cancel</a>
     </div>
 </form>

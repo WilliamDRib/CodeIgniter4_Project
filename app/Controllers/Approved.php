@@ -8,4 +8,5 @@ class Approved extends BaseController
     {
         return view('pages/approved');
     }
+
 }

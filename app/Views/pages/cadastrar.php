@@ -6,6 +6,7 @@
 
     /* Full-width inputs */
     input[type=text],
+    input[type=number],
     input[type=password] {
         width: 100%;
         padding: 12px 20px;
@@ -44,6 +45,8 @@
     .imgcontainer {
         text-align: center;
         margin: 24px 0 12px 0;
+        width:80%;
+        margin-left:10%;
     }
 
     /* Avatar image */
@@ -83,11 +86,10 @@
         <label for="ano"><b>Ano</b></label>
         <input type="number" placeholder="Enter ano" name="ano" required>
 
+        <label for="img"><b>URL da img</b></label>
+        <input type="text" placeholder="Enter placa" name="img">
+
         <button type="submit">Cadastrar carro</button>
 
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-        <a type="button" class="cancelbtn" href="/">Cancel</a>
     </div>
 </form>

@@ -44,6 +44,8 @@
     .imgcontainer {
         text-align: center;
         margin: 24px 0 12px 0;
+        width:50%;
+        margin-left: 25%;
     }
 
     /* Avatar image */
@@ -57,12 +59,6 @@
         padding: 16px;
     }
 
-    /* Change styles for span and cancel button on extra small screens */
-    @media screen and (max-width: 300px) {
-        .cancelbtn {
-            width: 100%;
-        }
-    }
 </style>
 
 <form action="/login_verifica" method="post">
@@ -78,12 +74,5 @@
         <input type="password" placeholder="Enter Password" name="password" required>
 
         <button type="submit">Login</button>
-        <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-        <a type="button" class="cancelbtn" href="/">Cancel</a>
     </div>
 </form>

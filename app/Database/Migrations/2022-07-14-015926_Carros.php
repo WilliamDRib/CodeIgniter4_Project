@@ -24,6 +24,10 @@ class Carros extends Migration
             ],
             'ano' => [
                 'type'          => 'INT'
+            ],
+            'img' => [
+                'type'          => 'VARCHAR',
+                'constraint'    => 255
             ]
         ]) -> createTable('carros');
     }

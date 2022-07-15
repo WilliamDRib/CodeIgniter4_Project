@@ -54,6 +54,8 @@ $routes->get('/tela_anunciar', 'Cadastrar::tela_anunciar');
 $routes->post('/anunciar', 'Cadastrar::anunciar');
 
 $routes->get('/reservar', 'Reservar::index');
+$routes->post('/reservar', 'Reservar::reservar');
+
 
 
 

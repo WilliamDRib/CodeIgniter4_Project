@@ -8,7 +8,7 @@ class CarrosModel extends Model
 {
     protected $table            = 'carros';
     protected $primaryKey       = 'id';
-    protected $allowedFields    = ['name','type','placa','ano'];
+    protected $allowedFields    = ['name','type','placa','ano','img'];
 
     protected $validationRules     = [
         'name'       => 'required',

@@ -17,7 +17,6 @@ class Cadastrar extends BaseController
 
     public function index()
     {
-
         return view('pages/cadastrar');
     }
 
@@ -34,6 +33,7 @@ class Cadastrar extends BaseController
         $newCar['type']       = $this -> request -> getPost('type');
         $newCar['placa']      = $this -> request -> getPost('placa');
         $newCar['ano']        = $this -> request -> getPost('ano');
+        $newCar['img']        = $this -> request -> getPost('img');
 
         try{
             if($this -> carModel -> save($newCar)){
@@ -61,28 +61,40 @@ class Cadastrar extends BaseController
 
         $data = $db -> query('SELECT * FROM carros');
 
+        echo "<div class='carros'>";
         foreach ($data -> getResult() as $row) {
-            echo "Id = " . $row -> id . " | ";
-            echo "name = " . $row -> name . " | ";
-            echo "type = " . $row -> type . " | ";
-            echo "placa = " . $row -> placa . " | ";
-            echo "ano = " . $row -> ano;
-            echo "<br>";
+            echo "<dl>";
+                echo "<dt>Id = " . $row -> id . "</dt>";
+                echo "<dd>Nome do carro = " . $row -> name . "</dd>";
+                echo "<dd>Tipo = " . $row -> type . "</dd>";
+                echo "<dd>Placa = " . $row -> placa . "</dd>";
+                echo "<dd>Ano = " . $row -> ano . "</dd>";
+                echo "<dd><img class='carro' src=" . $row -> img . "></dd>";
+            echo "</dl>";
         }
+        echo "</div>";
 
         return view('pages/anunciar');
     }
 
     public function anunciar(){
 
-        $data_post['idCarro'] = $this -> request -> getPost('carro'); 
-        $data_post['turno']   = $this -> request -> getPost('turno'); 
+        $data_post['idCarro'] = $this -> request -> getPost('carro');
+        $data_post['turno']   = $this -> request -> getPost('turno');
         $data_post['desc']    = $this -> request -> getPost('desc');
         $data_post['status']  = 0;
-        $data_post['idUser']  = 0; 
+        $data_post['idUser']  = 0;
+
+        $db = db_connect();             //Consultar se o veiculo existe
+        $data = $db -> query('SELECT * FROM carros WHERE id = '.$data_post['idCarro'].'');
 
         try{
-            if($this -> alugarModel -> save($data_post)){
+            if(!$data -> getResult()){
+                echo("
+                <script>
+                    alert('Erro no registro!');
+                </script>");
+            }else if($this -> alugarModel -> save($data_post)){
                 echo("
                 <script>
                     alert('Inserido!');

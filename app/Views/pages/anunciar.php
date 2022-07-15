@@ -31,15 +31,6 @@
         opacity: 0.8;
     }
 
-    /* Extra style for the cancel button (red) */
-    .cancelbtn {
-        color: white;
-        text-decoration: none;
-        width: auto;
-        padding: 10px 18px;
-        background-color: #f44336;
-    }
-
     /* Center the avatar image inside this container */
     .imgcontainer {
         text-align: center;
@@ -51,6 +42,18 @@
         width: 40%;
         border-radius: 50%;
     }
+
+    img.carro{
+        width:100%;
+        max-width:300px;
+    }
+
+    div.carros{
+        display: flex;
+        flex-wrap: wrap;
+        margin:1.4vw;
+    }
+
 
     /* Add padding to containers */
     .container {
