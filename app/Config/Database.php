@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => '',
         'username' => '',
         'password' => '',
-        'database' => WRITEPATH . 'database/users.db',
+        'database' => WRITEPATH . 'database/database.db',
         'DBDriver' => 'SQLite3',
         'DBPrefix' => '',
         'pConnect' => false,

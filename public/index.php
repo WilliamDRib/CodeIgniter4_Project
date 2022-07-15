@@ -1,8 +1,12 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome to CodeIgniter 4!</title>
+    <title>Projeto with Code Igniter!</title>
     <meta name="description" content="The small framework with powerful features">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
@@ -51,14 +55,10 @@ require_once SYSTEMPATH . 'Config/DotEnv.php';
  * the pieces all working together.
  */
 
-include '../app/Views/static/nav.php';
-
 $app = Config\Services::codeigniter();
-$app->initialize();
+$app -> initialize();
 $context = is_cli() ? 'php-cli' : 'web';
-$app->setContext($context);
-
-
+$app -> setContext($context);
 
 /*
  *---------------------------------------------------------------
@@ -68,6 +68,7 @@ $app->setContext($context);
  * up the engines and make this app do its thang.
  */
 
+include '../app/Views/static/nav.php';
 
 $app->run();
 

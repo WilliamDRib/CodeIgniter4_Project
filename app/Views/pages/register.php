@@ -65,7 +65,7 @@
     }
 </style>
 
-<form action="/teste" method="POST">
+<form action="/register_inserir" method="POST">
     <div class="imgcontainer">
         <img src="http://images7.memedroid.com/images/UPLOADED860/5f6673b257253.jpeg" alt="Avatar" class="avatar">
     </div>

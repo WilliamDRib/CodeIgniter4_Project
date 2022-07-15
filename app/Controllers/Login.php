@@ -2,43 +2,46 @@
 
 namespace App\Controllers;
 
+use Exception;
+
 class Login extends BaseController
 {
-
-    private $userModel;
-
-    public function __construct()
-    {
-        $this -> userModel = new \App\Models\UserModel();
-    }
-
 
     public function index()
     {
         return view('pages/login');
-    }
+    }   
 
     public function login()
     {
-
         $db = db_connect();
 
-        $newUser['name'] = $this -> request -> getPost('name');
+        $newUser['name']     = $this -> request -> getPost('name');
         $newUser['password'] = $this -> request -> getPost('password');
 
-        $dados = $db -> query("SELECT * FROM users WHERE name = '" . $newUser['name'] . "' AND password = '" . $newUser['password'] . "'");
+        try{
 
-        $user = $dados -> getRow();
-        echo($user->name);
-        
-        // foreach ($dados->getResultArray() as $row)  printando 
-        // {
-        //     echo $row['id'] . " ";
-        //     echo $row['name']. " ";
-        //     echo $row['password']. " ";
-        //     echo $row['admin']. " ";
-        //     echo "<br>";
-        // }
+            $dados = $db -> query("SELECT * FROM users WHERE name = '" . $newUser['name'] . "' AND password = '" . $newUser['password'] . "'");
+            
+            $user = $dados -> getRow();
+
+            if($user){
+                
+                $_SESSION['id']     = $user -> id;
+                $_SESSION['name']   = $user -> name;
+                $_SESSION['admin']  = $user -> admin;
+
+                return view("pages/approved");
+
+            }else{
+                return view("pages/login");
+            }       
+
+        }catch(Exception $e){
+            echo($e);
+        }
+
+        return view("pages/login");
     }
-    
+
 }

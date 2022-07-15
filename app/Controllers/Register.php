@@ -18,7 +18,7 @@ class Register extends BaseController
         return view('pages/register');
     }
 
-    public function listarUser()
+    public function listar()
     {
         $data = $this -> userModel -> findAll();
         return $this -> response -> setJSON($data);
@@ -33,15 +33,20 @@ class Register extends BaseController
 
         try{
             if($this -> userModel -> save($newUser)){
-                // return view("pages/home");
-                return \App\Controllers\Register::listarUser();
+                
+                return view("pages/login");        
+                
             }else{
-                echo("Erro");
-                return \App\Controllers\Register::index();
+                echo("
+                <script>
+                    alert('Erro no registro!');
+                </script>");
+
+                return view("pages/register");
             }
 
         }catch(Exception $e){
-            echo ($e -> getMessage());
+            echo ($e);
         }
 
     }

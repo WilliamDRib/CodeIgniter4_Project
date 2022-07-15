@@ -56,34 +56,22 @@
     .container {
         padding: 16px;
     }
-
-    /* Change styles for span and cancel button on extra small screens */
-    @media screen and (max-width: 300px) {
-        .cancelbtn {
-            width: 100%;
-        }
-    }
+    
 </style>
 
-<form action="/login_verifica" method="post">
-    <div class="imgcontainer">
-        <img src="https://c.tenor.com/kHcmsxlKHEAAAAAC/rock-one-eyebrow-raised-rock-staring.gif" alt="Avatar" class="avatar">
-    </div>
+<form action="/anunciar" method="post">
 
     <div class="container">
-        <label for="name"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="name" required>
 
-        <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+        <label for="carro"><b>Id do Carro</b></label>
+        <input type="text" placeholder="Enter Id do carro" name="carro" required>
 
-        <button type="submit">Login</button>
-        <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-    </div>
+        <label for="turno"><b>Turno</b></label>
+        <input type="text" placeholder="Enter turno" name="turno" required>
 
-    <div class="container" style="background-color:#f1f1f1">
-        <a type="button" class="cancelbtn" href="/">Cancel</a>
+        <label for="desc"><b>Desc (opcional)</b></label>
+        <input type="text" placeholder="Enter desc" name="desc">
+
+        <button type="submit">Registrar</button>
     </div>
 </form>

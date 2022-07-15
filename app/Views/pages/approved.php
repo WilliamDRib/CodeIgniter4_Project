@@ -16,7 +16,8 @@
     }
 </style>
 <a href="/reservar">Reservar</a>
-<a href="/cadastrar">Cadastrar</a>
+<a href="/cadastrar">Cadastrar carro</a>
+<a href="/tela_anunciar">Anunciar carro</a>
 
 <div class="imgcontainer">
     <img src="https://c.tenor.com/jWgsI4lVFxYAAAAd/dwayne-johnson-dwayne-the-rock-johnson.gif=" alt="sucodeZAPEZAPE" class="avatar">

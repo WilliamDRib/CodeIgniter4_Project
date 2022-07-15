@@ -8,4 +8,5 @@ class Reservar extends BaseController
     {
         return view('pages/reservar');
     }
+
 }

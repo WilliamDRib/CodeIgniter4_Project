@@ -35,17 +35,26 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
 $routes->get('/', 'Home::index');
+
 $routes->get('/login', 'Login::index');
-$routes->post('/teste1', 'Login::login');
+$routes->post('/login_verifica', 'Login::login');
 
 $routes->get('/register', 'Register::index');
-$routes->post('/teste', 'Register::register');
-$routes->get('/listar', 'Register::listarUser');
+$routes->post('/register_inserir', 'Register::register');
+$routes->get('/listarUser', 'Register::listar');
 
 $routes->get('/approved', 'Approved::index');
-$routes->get('/reservar', 'Reservar::index');
+
 $routes->get('/cadastrar', 'Cadastrar::index');
+$routes->post('/cadastrar_Carro', 'Cadastrar::cadastrarCarro');
+$routes->get('/listarCarros', 'Cadastrar::listar');
+$routes->get('/tela_anunciar', 'Cadastrar::tela_anunciar');
+$routes->post('/anunciar', 'Cadastrar::anunciar');
+
+$routes->get('/reservar', 'Reservar::index');
+
 
 
 /*
