@@ -17,6 +17,7 @@ class Cadastrar extends BaseController
 
     public function index()
     {
+
         return view('pages/cadastrar');
     }
 
@@ -28,7 +29,6 @@ class Cadastrar extends BaseController
 
     public function cadastrarCarro()  
     {
-
         $newCar['name']       = $this -> request -> getPost('name');
         $newCar['type']       = $this -> request -> getPost('type');
         $newCar['placa']      = $this -> request -> getPost('placa');

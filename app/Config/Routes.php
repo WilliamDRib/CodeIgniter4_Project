@@ -40,6 +40,7 @@ $routes->get('/', 'Home::index');
 
 $routes->get('/login', 'Login::index');
 $routes->post('/login_verifica', 'Login::login');
+$routes->get('/login_sair', 'Login::sair');
 
 $routes->get('/register', 'Register::index');
 $routes->post('/register_inserir', 'Register::register');

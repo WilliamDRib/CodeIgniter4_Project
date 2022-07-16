@@ -30,6 +30,7 @@ class Login extends BaseController
                 $_SESSION['id']     = $user -> id;
                 $_SESSION['name']   = $user -> name;
                 $_SESSION['admin']  = $user -> admin;
+                $_SESSION['status'] = 1;
 
                 return view("pages/approved");
 
@@ -44,4 +45,12 @@ class Login extends BaseController
         return view("pages/login");
     }
 
+    public function sair(){
+        unset($_SESSION['id']);
+        unset($_SESSION['name']);
+        unset($_SESSION['admin']);
+        unset($_SESSION['status']);
+
+        return view('pages/home');
+    }
 }

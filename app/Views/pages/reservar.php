@@ -5,8 +5,8 @@
     }
 
     /* Full-width inputs */
-    input[type=text],
-    input[type=password] {
+    
+    input[type=year] {
         width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
@@ -58,6 +58,9 @@
     /* Add padding to containers */
     .container {
         padding: 16px;
+    }
+    dd {
+        text-align: center;
     }
     
 </style>
