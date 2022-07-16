@@ -27,7 +27,7 @@
         border-radius: 30%;
         padding: 1em 2em;
         text-align: center;
-        margin: 1em 5em;
+        margin: 1em 2em;
         font-family: sans-serif;
         letter-spacing: 2.5px;
         font-size: 1.5em;

@@ -68,7 +68,7 @@ $app -> setContext($context);
  * up the engines and make this app do its thang.
  */
 
-include '../app/Views/static/nav.php';
+include '../app/Views/static/nav.php';  
 
 $app->run();
 
